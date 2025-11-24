@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish To-Do App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Your Work For Today</h1>
+        <a href="/add" class="add-button">Add New Task</a>
+
+        <% for(list of lists) {%>
+            <div class="todo-item">
+                <div class="item-content">
+                    <input type="checkbox">
+                    <p>
+                        <%=list.work%>
+                        <a href="/edit/<%=list.work%>" class="edit-link">Edit</a>
+                    </p>
+                </div>
+                <div>
+                    <form method="post" action="/<%=list.work%>?_method=DELETE">
+                        <button class="delete-button" type="submit">Delete</button>
+                    </form>
+                </div>
+            </div>
+        <%}%>
+    </div>
+</body>
+</html>

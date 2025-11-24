@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6; /* Light gray background */
+            color: #333;
+            margin: 0;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        /* Form Container */
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            box-sizing: border-box;
+        }
+
+        /* Label Styling */
+        label {
+            display: block;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        /* Textarea Styling */
+        textarea {
+            width: 100%;
+            min-height: 150px; /* Make it large enough for easy editing */
+            padding: 15px;
+            margin-bottom: 25px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            resize: vertical; /* Allow resizing vertically */
+            transition: border-color 0.3s ease;
+        }
+
+        textarea:focus {
+            border-color: #3498db; /* Blue focus highlight */
+            outline: none;
+        }
+
+        /* Button Styling */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #2ecc71; /* Green color for submission */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        button:hover {
+            background-color: #27ae60;
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="/<%=list.work%>?_method=PATCH">
+        <label for="task-input">Edit Task:</label>
+        <textarea id="task-input" placeholder="Coding 6 PM" name="work"><%=list.work%></textarea>
+        <button type="submit">Update Task</button>
+    </form>
+</body>
+</html>

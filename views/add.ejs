@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6; /* Light gray background */
+            color: #333;
+            margin: 0;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        /* Form Container */
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            box-sizing: border-box;
+        }
+
+        /* Label Styling */
+        label {
+            display: block;
+            font-size: 1.5em; /* Larger, clearer title */
+            font-weight: 600;
+            color: #3498db; /* Blue accent color */
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* Textarea Styling */
+        textarea {
+            width: 100%;
+            min-height: 150px; /* Ample space for the task description */
+            padding: 15px;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            resize: vertical; /* Allow resizing vertically */
+            transition: border-color 0.3s ease;
+        }
+
+        textarea:focus {
+            border-color: #3498db; /* Blue focus highlight */
+            outline: none;
+        }
+
+        /* Button Styling */
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #3498db; /* Main accent color for submission */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="/add">
+        <label>📝 Add a New Task:</label>
+        <textarea placeholder="e.g., Finish report by 5 PM" name="work"></textarea>
+        <button type="submit">Add Task</button>
+    </form>
+</body>
+</html>

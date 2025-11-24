@@ -1,0 +1,110 @@
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e2ece9; /* Light background */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .add-button {
+            display: block;
+            width:100%; /* Full width for better UX */
+            padding:12px 0px;
+            margin-bottom: 20px;
+            background-color: #3498db; /* Blue accent color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Remove underline from the link */
+            text-align: center;
+        }
+
+        .add-button:hover {
+            background-color: #2980b9;
+        }
+
+        .todo-item {
+            display: flex;
+            justify-content: space-between; /* Space between the item content and the delete button */
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .todo-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-content {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .item-content p {
+            margin: 0;
+            margin-left: 10px; 
+            font-size: 18px;
+            flex-grow: 1; 
+        }
+
+        input[type="checkbox"] {
+            min-width: 20px;
+            min-height: 20px;
+            cursor: pointer;
+        }
+
+      
+        .edit-link {
+            color: #2ecc71; 
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 0.9em;
+            transition: color 0.3s ease;
+        }
+
+        .edit-link:hover {
+            color: #27ae60;
+            text-decoration: underline;
+        }
+
+        .delete-button {
+            background-color: #e74c3c; 
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .delete-button:hover {
+            background-color: #c0392b;
+        }
