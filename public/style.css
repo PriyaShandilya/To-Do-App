@@ -80,7 +80,7 @@
         }
 
       
-        .edit-link {
+        .edit-btn {
             color: #2ecc71; 
             text-decoration: none;
             margin-left: 15px;
@@ -108,3 +108,11 @@
         .delete-button:hover {
             background-color: #c0392b;
         }
+.disabled-text {
+    /* Visual Disabling */
+    text-decoration: line-through;
+    color: #aaa; 
+    /* Prevent Selection */
+    user-select: none;
+    cursor: default;
+}

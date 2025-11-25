@@ -46,7 +46,6 @@ app.get("/edit/:work",(req,res)=>{
 app.patch("/:work",(req,res)=>{
     let {work} = req.params;
     let newwork = req.body.work;
-    console.log(newwork);
     let list = lists.find(l => l.work===work);
     list.work = newwork;
     res.redirect("/")
